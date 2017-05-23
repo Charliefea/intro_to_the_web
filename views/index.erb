@@ -1,3 +1,13 @@
 <style> img {border: 9px dashed red;}</style>
 <img src="http://bit.ly/1eze8aE">
-<h1>My name is <%=["Amigo", "Oscar", "Viking"].sample%></h1>
+
+
+<h1>My name is <%=@name%></h1>
+
+<% if !@name %>
+<form action ="/named-cat">
+  <b>Name</b> </br>
+  <input type ="text" name = "name">
+  <input type ="submit" value = "Submit">
+</form>
+<%end%>
